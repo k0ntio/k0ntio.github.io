@@ -128,13 +128,16 @@ input:checked+.slider::before {
 }
 
 .dropdown .dropbtn {
-    background-color: #ee6211;
+    background-color: #BF4E0D;
     color: white;
     padding: 10px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+}
 
+.dropbtn:hover {
+    background-color: #ee6211;
 }
 
 .dropdown-content {
