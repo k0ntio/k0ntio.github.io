@@ -1,0 +1,245 @@
+/* Yleiset tyylit */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+body.light-theme {
+    background-color: #fff;
+    color: #000;
+}
+
+body.light-theme .navbar {
+    background-color: #FAFAFA;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+body.light-theme .nav-link {
+    color: #000;
+    transition: color 0.2s;
+}
+
+body.light-theme .nav-link:hover {
+    color: #ddd;
+}
+
+body.light-theme .theme-switch .slider {
+    background-color: #eee;
+}
+
+body.dark-theme {
+    background-color: #2A2A2A;
+    color: #fff;
+}
+
+body.dark-theme .navbar {
+    background-color: #222;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+body.dark-theme .nav-link {
+    color: #fff;
+    transition: color 0.2s;
+}
+
+body.dark-theme .nav-link:hover {
+    color: #bbb;
+}
+
+body.dark-theme .theme-switch .slider {
+    background-color: #333;
+}
+
+/* Navigaatiopalkki */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FAFAFA;
+    padding: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 20px;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #1C1C1C;
+    margin-right: 20px;
+
+}
+
+.nav-link:hover {
+    color: #ddd;
+}
+
+/* Teeman vaihdin */
+.theme-switch {
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.theme-switch .slider {
+    width: 54px;
+    height: 30px;
+    background-color: #fad0b7;
+    border-radius: 40px;
+    position: relative;
+    cursor: pointer;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.theme-switch .slider::before {
+    content: "";
+    width: 28px;
+    height: 28px;
+    background-color: #ee6211;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+input:checked+.slider::before {
+    transform: translateX(24px);
+}
+
+/* Pudotusvalikko */
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropbtn {
+    background-color: #ee6211;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    right: 0;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Sivun sisältö */
+#content {
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    color: #ee6211;
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+a {
+    display: flex;
+    color: #0AF;
+    margin: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+}
+
+figure {
+    margin: auto;
+}
+
+/* Alatunnisteen tyylit */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 12px;
+}
+
+/* Responsiivisuus */
+@media screen and (max-width: 472px) {
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-link {
+        display: flex;
+        margin: 5px;
+    }
+
+    #content {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+}
